@@ -225,6 +225,8 @@ class RestRenderer(mistune.Renderer):
     def block_code(self, code, lang=None):
         if lang == 'math':
             first_line = '\n.. math::\n\n'
+        elif lang == 'plantuml':
+            first_line = '\n.. uml::\n\n'
         elif lang:
             first_line = '\n.. code-block:: {}\n\n'.format(lang)
         elif _is_sphinx:
