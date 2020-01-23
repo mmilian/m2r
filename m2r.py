@@ -227,8 +227,6 @@ class RestRenderer(mistune.Renderer):
             first_line = '\n.. math::\n\n'
         elif lang == 'plantuml':
             first_line = '\n.. uml::\n\n'
-            print("Code :" + code)
-            return first_line + self._indent_block(code) + '\n\n'
         elif lang:
             first_line = '\n.. code-block:: {}\n\n'.format(lang)
         elif _is_sphinx:
