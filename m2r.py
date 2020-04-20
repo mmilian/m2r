@@ -227,6 +227,8 @@ class RestRenderer(mistune.Renderer):
             first_line = '\n.. math::\n\n'
         elif lang == 'plantuml':
             first_line = '\n.. uml::\n\n'
+        elif lang == 'mermaid':
+            first_line = '\n.. mermaid::\n\n'
         elif lang == 'graphviz':
             first_line = '\n.. uml::\n\n'
             code = '@startuml\n{}\n@enduml'.format(code)
